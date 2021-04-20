@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .load {
+            background: rgb(92, 208, 209);
+            background: linear-gradient(331deg, rgba(92, 208, 209, 1) 0%, rgba(37, 80, 207, 1) 28%, rgba(61, 10, 117, 1) 65%, rgba(148, 23, 108, 1) 100%);
+            background-size: 400% 400%;
+            width: 100%;
+            height: 14px;
+            position: fixed;
+            animation: animate 15s ease infinite;
+            z-index: 99;
+        }
+        
+        @keyframes animate {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .text {
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            color: white;
+            position: absolute;
+            top: 5em;
+            margin-left: 12em;
+            margin-right: 12em;
+            padding: 2em;
+            font-size: 15pt;
+        }
+        
+        h1 {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="load" class="load"></div>
+
+    <div class="container">
+        <img src="/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="">
+        <div class="text">
+            <h1>Lorem Ipsum</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus quod ea eaque, ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Repellat repellendus quod ea eaque, ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Repellat repellendus quod ea eaque, ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Repellat repellendus quod ea eaque, ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+                repellendus quod ea eaque, ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus
+                quod ea eaque, ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat repellendus quod ea eaque,
+                ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam
+                expedita totam labore. ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum
+                iusto? Sed quisquam expedita totam labore. ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam
+                aspernatur earum iusto? Sed quisquam expedita totam labore. ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. ab voluptatem provident, quaerat debitis illo
+                dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. ab voluptatem provident, quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. ab voluptatem provident,
+                quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. quaerat debitis illo dicta
+                veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore. quaerat debitis illo dicta veniam quibusdam aspernatur earum iusto? Sed quisquam expedita totam labore.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var load = document.getElementById("load");
+        window.addEventListener("scroll", (e) => {
+            console.log(window.scrollY);
+            load.style.width = 6 * this.scrollY + "px";
+        })
+    </script>
+</body>
+
+</html>
